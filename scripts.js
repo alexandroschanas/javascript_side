@@ -1,6 +1,6 @@
 let playButton = document.querySelector('.player__button.toggle');
 let videoElement = document.querySelector('.player__video');
-let isPlaying = false;
+let isPlaying = true;
 
 playButton.addEventListener('click',function(){
     if(isPlaying){
