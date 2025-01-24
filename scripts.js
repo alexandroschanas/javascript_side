@@ -33,7 +33,7 @@ videoElement.playbackRate = speedSelected;
 })
 
 
-videoElement.ondurationchange = function(){
+videoElement.onloadeddata = function(){
 console.log(videoElement.currentTime);
 
 }
