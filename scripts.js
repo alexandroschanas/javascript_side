@@ -35,6 +35,7 @@ videoElement.playbackRate = speedSelected;
 
 videoElement.ontimeupdate = function(){
 console.log(videoElement.currentTime);
+let onePercentOfVideo = (totalVideoDuration / 100);
 
 }
 
