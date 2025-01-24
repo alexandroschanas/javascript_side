@@ -16,12 +16,12 @@ playButton.addEventListener('click',function(){
     if(isPlaying){
         videoElement.pause();
         isPlaying = false;
-        console.log(videoElement.currentTime());
+        console.log(videoElement.currentTime);
         console.log("Total video duration is :" + totalVideoDuration);
     }else{
         videoElement.play();
         isPlaying = true;
-        console.log(videoElement.currentTime());
+        console.log(videoElement.currentTime);
         console.log("Total video duration is :" + totalVideoDuration);
     }
 })
