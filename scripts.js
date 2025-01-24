@@ -16,11 +16,13 @@ playButton.addEventListener('click',function(){
     if(isPlaying){
         videoElement.pause();
         isPlaying = false;
-        console.log(videoCurrentTime);
+        console.log(videoElement.currentTime());
+        console.log("Total video duration is :" + totalVideoDuration);
     }else{
         videoElement.play();
-        isPlaying= true;
-        console.log(videoCurrentTime);
+        isPlaying = true;
+        console.log(videoElement.currentTime());
+        console.log("Total video duration is :" + totalVideoDuration);
     }
 })
 
@@ -36,7 +38,7 @@ videoElement.playbackRate = speedSelected;
 
 
 
-isPlaying.addEventListener('change',function(){
+(videoElement.currentTime()).addEventListener('change',function(){
     if(isPlaying){
         console.log(videoCurrentTime);
         console.log(incrementalProgressbar);
