@@ -3,9 +3,10 @@ let videoElement = document.querySelector('.player__video');
 let isPlaying = false;
 
 playButton.addEventListener('click',function(){
-    if(!isPlaying){
-        videoElement.play();
-    }else{
+    if(isPlaying){
         videoElement.pause();
+        isPlaying = false;
+    }else{
+        videoElement.play();
     }
 })
