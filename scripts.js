@@ -8,5 +8,6 @@ playButton.addEventListener('click',function(){
         isPlaying = false;
     }else{
         videoElement.play();
+        isPlaying= true;
     }
 })
