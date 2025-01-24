@@ -29,8 +29,10 @@ let totalProgressbar = document.querySelector(".progress");
 let incrementalProgressbar = document.querySelector(".progress__filled");
 let videoCurrentTime = videoElement.currentTime;
 
-videoCurrentTime.addEventListener('change',function(event){
-    console.log(videoCurrentTime);
-    console.log(incrementalProgressbar);
+isPlaying.addEventListener('change',function(event){
+    if(isPlaying){
+        console.log(videoCurrentTime);
+        console.log(incrementalProgressbar);
+    }
 })
 
