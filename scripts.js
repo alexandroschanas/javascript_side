@@ -14,6 +14,6 @@ playButton.addEventListener('click',function(){
 })
 
 volumeControl.addEventListener('change',function(event){
-console.log(event.value);
-console.log("event target value is:" + event.target.value);
+let volumeSelected = event.target.value;
+videoElement.volume(volumeSelected);
 })
