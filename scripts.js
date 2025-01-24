@@ -38,7 +38,7 @@ videoElement.playbackRate = speedSelected;
 
 
 
-(videoElement.currentTime()).addEventListener('change',function(){
+(videoElement.currentTime).addEventListener('change',function(){
     if(isPlaying){
         console.log(videoCurrentTime);
         console.log(incrementalProgressbar);
