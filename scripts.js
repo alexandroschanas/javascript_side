@@ -5,7 +5,7 @@ let playButton = document.querySelector('.player__button.toggle');
 let volumeControl = document.querySelector("input[name='volume']")
 let speedControl = document.querySelector("input[name='playbackRate']")
 
-let totalVideoDuration = videoElement.duration;
+/* let totalVideoDuration = videoElement.duration; */
 let totalProgressbar = document.querySelector(".progress");
 let incrementalProgressbar = document.querySelector(".progress__filled");
 let videoCurrentTime = videoElement.currentTime;
@@ -35,7 +35,8 @@ videoElement.playbackRate = speedSelected;
 
 videoElement.ontimeupdate = function(){
 console.log(videoElement.currentTime);
-let onePercentOfVideo = (totalVideoDuration / 100);
+videoElement.duration
+/* let onePercentOfVideo = (totalVideoDuration / 100); */
 
 }
 
