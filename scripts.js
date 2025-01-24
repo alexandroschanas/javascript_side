@@ -19,7 +19,7 @@ let volumeSelected = event.target.value;
 videoElement.volume = volumeSelected;
 })
 
-speedControl.addEventListener('changed',function(event){
+speedControl.addEventListener('change',function(event){
 let speedSelected = event.target.value;
 videoElement.playbackRate = speedSelected;
 })
