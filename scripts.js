@@ -1,16 +1,26 @@
-let playButton = document.querySelector('.player__button.toggle');
+
 let videoElement = document.querySelector('.player__video');
+
+let playButton = document.querySelector('.player__button.toggle');
 let volumeControl = document.querySelector("input[name='volume']")
 let speedControl = document.querySelector("input[name='playbackRate']")
+
+let totalVideoDuration = videoElement.duration;
+let totalProgressbar = document.querySelector(".progress");
+let incrementalProgressbar = document.querySelector(".progress__filled");
+let videoCurrentTime = videoElement.currentTime;
+
 let isPlaying = true;
 
 playButton.addEventListener('click',function(){
     if(isPlaying){
         videoElement.pause();
         isPlaying = false;
+        console.log(videoCurrentTime);
     }else{
         videoElement.play();
         isPlaying= true;
+        console.log(videoCurrentTime);
     }
 })
 
@@ -24,12 +34,9 @@ let speedSelected = event.target.value;
 videoElement.playbackRate = speedSelected;
 })
 
-let totalVideoDuration = videoElement.duration;
-let totalProgressbar = document.querySelector(".progress");
-let incrementalProgressbar = document.querySelector(".progress__filled");
-let videoCurrentTime = videoElement.currentTime;
 
-isPlaying.addEventListener('change',function(event){
+
+isPlaying.addEventListener('change',function(){
     if(isPlaying){
         console.log(videoCurrentTime);
         console.log(incrementalProgressbar);
